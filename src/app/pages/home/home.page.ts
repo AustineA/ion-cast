@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { podcasts, discover } from 'src/app/services/shared/data';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
   query: string;
+  fresh = podcasts;
+  discoverList = discover;
 
   constructor() {}
 }

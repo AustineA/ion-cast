@@ -21,10 +21,10 @@
 
   <section class="discover">
     <h3>Discover</h3>
-    <div>
-      <div class="discover-card">
-        <img src="/assets/images/discover1.jpg" alt="" />
-        <ion-label> All The Code </ion-label>
+    <div class="discover-list">
+      <div class="discover-card" *ngFor="let item of discoverList">
+        <img [src]="item?.cover" alt="" />
+        <ion-label> {{item?.podcast}} </ion-label>
       </div>
     </div>
   </section>

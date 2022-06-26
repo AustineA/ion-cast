@@ -29,16 +29,30 @@ ion-input {
     border-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
   }
+
+  .discover-list {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    gap: 15px;
+  }
+
+  .discover-card {
+    height: 170px;
+    flex: 0 0 142px;
+  }
 }
 
 .fresh-list {
   padding: 0;
 
   li {
+    margin-top: 25px;
     list-style: none;
     background: #fff;
     padding: 10px;
     border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
   }
 }
 .fresh-meta {
