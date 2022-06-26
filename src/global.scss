@@ -30,3 +30,17 @@
 body {
   background: var(--ion-color-cast-bg);
 }
+
+h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.header-double {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  h3 {
+    margin: 0;
+  }
+}

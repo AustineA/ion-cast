@@ -2,9 +2,54 @@
   <ion-toolbar color="cast-bg">
     <ion-title> IonCast </ion-title>
     <div slot="end" mode="ios" class="ion-padding-end avatar">
-      <img src="../../../assets/images/avatar.jpg" />
+      <img src="/assets/images/avatar.jpg" />
     </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="cast-bg ion-padding"> </ion-content>
+<ion-content [fullscreen]="true" color="cast-bg ion-padding">
+  <div>
+    <ion-input
+      inputmode="text"
+      type="text"
+      [(ngModel)]="query"
+      name="query"
+      placeholder="Type here to search..."
+    >
+    </ion-input>
+  </div>
+
+  <section class="discover">
+    <h3>Discover</h3>
+    <div>
+      <div class="discover-card">
+        <img src="/assets/images/discover1.jpg" alt="" />
+        <ion-label> All The Code </ion-label>
+      </div>
+    </div>
+  </section>
+
+  <section class="fresh">
+    <div class="header-double">
+      <h3>Fresh</h3>
+      <ion-label> See all </ion-label>
+    </div>
+
+    <ul class="fresh-list" lines="none">
+      <li>
+        <div class="fresh-meta">
+          <div class="fresh-image">
+            <img src="/assets/images/fresh1.jpg" />
+          </div>
+          <div class="fresh-info">
+            <ion-label class="fresh-list-title"
+              >Dev Vacations, WWDC and</ion-label
+            >
+            <ion-label>All The Code</ion-label>
+            <ion-label>10 Nov, 2022 | 1h 00m</ion-label>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</ion-content>
