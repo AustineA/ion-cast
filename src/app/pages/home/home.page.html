@@ -1,5 +1,5 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar color="cast-bg">
+  <ion-toolbar color="cast-bg" mode="md">
     <ion-title> IonCast </ion-title>
     <div slot="end" mode="ios" class="ion-padding-end avatar">
       <img src="/assets/images/avatar.jpg" />
@@ -36,17 +36,15 @@
     </div>
 
     <ul class="fresh-list" lines="none">
-      <li>
+      <li *ngFor="let podcast of fresh">
         <div class="fresh-meta">
           <div class="fresh-image">
-            <img src="/assets/images/fresh1.jpg" />
+            <img [src]="podcast?.cover" />
           </div>
           <div class="fresh-info">
-            <ion-label class="fresh-list-title"
-              >Dev Vacations, WWDC and</ion-label
-            >
-            <ion-label>All The Code</ion-label>
-            <ion-label>10 Nov, 2022 | 1h 00m</ion-label>
+            <ion-label class="fresh-list-title">{{podcast?.title}}</ion-label>
+            <ion-label>{{podcast?.podcast}}</ion-label>
+            <ion-label>{{podcast?.date}} | {{podcast?.duration}}</ion-label>
           </div>
         </div>
       </li>
