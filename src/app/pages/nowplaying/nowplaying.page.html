@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="cast-bg">
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/"
+        color="dark"
+        text="Back"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="cast-bg ion-padding">
+  <section>
+    <div class="cover-art">
+      <img src="/assets/images/fresh1.jpg" alt="" />
+      <ion-label>
+        Growing Dependabot to $14k MRR before selling to Github - Grey Baker,
+        Dependabot
+      </ion-label>
+
+      <ion-label class="channel-name"> Indie Bites </ion-label>
+    </div>
+  </section>
+
+  <section class="play-control">
+    <ion-range></ion-range>
+
+    <div class="controls">
+      <ion-buttons mode="md">
+        <ion-button mode="ios" (click)="seekBack()" size="large">
+          <img src="/assets/icon/seek-back.svg" alt="" />
+        </ion-button>
+        <ion-button mode="ios" (click)="play()" size="large">
+          <ion-icon name="play-circle" class="play"></ion-icon>
+        </ion-button>
+        <ion-button mode="ios" (click)="seekForward()" size="large">
+          <img src="/assets/icon/seek-forward.svg" />
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </section>
+</ion-content>

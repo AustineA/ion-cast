@@ -85,3 +85,19 @@ h3 {
     color: var(--base-step-3);
   }
 }
+
+.play-control {
+  ion-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  ion-button {
+    height: 70px;
+    width: 70px;
+  }
+  .play {
+    font-size: 60px;
+  }
+}
