@@ -12,4 +12,8 @@ export class HomePage {
   discoverList = discover;
 
   constructor() {}
+
+  filter(event) {
+    console.log(event);
+  }
 }

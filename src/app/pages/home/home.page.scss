@@ -1,3 +1,7 @@
+ion-title {
+  font-weight: bold;
+}
+
 .avatar {
   img {
     height: 2.5rem;
@@ -8,12 +12,10 @@
   }
 }
 
-ion-input {
-  background: #ffffff;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
-  border-radius: 15px;
-  --padding-start: 18px;
-  height: 50px;
+ion-searchbar {
+  --background: #ffffff;
+  --box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  --border-radius: 15px;
 }
 
 .discover {
@@ -40,44 +42,5 @@ ion-input {
   .discover-card {
     height: 170px;
     flex: 0 0 142px;
-  }
-}
-
-.fresh-list {
-  padding: 0;
-
-  li {
-    margin-top: 15px;
-    list-style: none;
-    background: #fff;
-    padding: 10px;
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
-  }
-}
-.fresh-meta {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-
-  .fresh-image {
-    width: 75px;
-    height: 75px;
-    border-radius: 15px;
-    overflow: hidden;
-  }
-}
-
-.fresh-info {
-  .fresh-list-title {
-    font-weight: bold;
-    font-size: 15px;
-    margin-bottom: 10px;
-    color: var(--base-step-1);
-  }
-  ion-label {
-    display: block;
-    font-size: 12px;
-    color: var(--base-step-3);
   }
 }

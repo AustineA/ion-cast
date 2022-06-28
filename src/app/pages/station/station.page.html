@@ -1,38 +1,28 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar color="cast-bg" mode="md">
-    <ion-title> IonCast </ion-title>
-    <div slot="end" mode="ios" class="ion-padding-end avatar">
-      <img src="/assets/images/avatar.jpg" />
-    </div>
+  <ion-toolbar color="cast-bg">
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/"
+        color="dark"
+        text="Back"
+      ></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-title>{{params}} Recipes</ion-title> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="cast-bg ion-padding">
-  <div>
-    <ion-searchbar
-      mode="md"
-      placeholder="Type here to search..."
-      animated="true"
-      debounce="500"
-      (ionInput)="filter($event)"
-      #searchBar
-    ></ion-searchbar>
-  </div>
-
-  <section class="discover">
-    <h3>Discover</h3>
-    <div class="discover-list">
-      <div class="discover-card" *ngFor="let item of discoverList">
-        <img [src]="item?.cover" alt="" />
-        <ion-label> {{item?.podcast}} </ion-label>
-      </div>
+  <section>
+    <div class="channel-cover">
+      <img src="/assets/images/discover1.jpg" alt="" />
+      <ion-label> All The Code </ion-label>
     </div>
   </section>
 
   <section class="fresh">
     <div class="header-double">
-      <h3>Fresh</h3>
-      <ion-label> See all </ion-label>
+      <h3>Episodes</h3>
+      <ion-label> {{fresh?.length}} </ion-label>
     </div>
 
     <ul class="fresh-list" lines="none">
