@@ -24,15 +24,34 @@
   </section>
 
   <section class="play-control">
-    <ion-range></ion-range>
+    <ion-range
+      #range
+      [(ngModel)]="progress"
+      max="100"
+      (touchend)="seek()"
+      (mouseup)="seek()"
+    ></ion-range>
 
     <div class="controls">
       <ion-buttons mode="md">
         <ion-button mode="ios" (click)="seekBack()" size="large">
           <img src="/assets/icon/seek-back.svg" alt="" />
         </ion-button>
-        <ion-button mode="ios" (click)="play()" size="large">
+        <ion-button
+          mode="ios"
+          (click)="togglePlay(false)"
+          size="large"
+          *ngIf="!isPlaying"
+        >
           <ion-icon name="play-circle" class="play"></ion-icon>
+        </ion-button>
+        <ion-button
+          mode="ios"
+          (click)="togglePlay(true)"
+          size="large"
+          *ngIf="isPlaying"
+        >
+          <ion-icon name="pause-circle" class="play"></ion-icon>
         </ion-button>
         <ion-button mode="ios" (click)="seekForward()" size="large">
           <img src="/assets/icon/seek-forward.svg" />

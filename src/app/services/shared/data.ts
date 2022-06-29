@@ -20,6 +20,8 @@ export const podcasts = [
     podcast: 'All The Code',
     date: '10 Nov, 2022',
     duration: '1h 00m',
+    audio:
+      '/assets/audio/How-to-Write-Unit-Tests-for-your-Ionic-Angular App-rY5N74OwWVY.mp3',
   },
   {
     cover: '/assets/images/fresh2.jpg',
@@ -27,6 +29,8 @@ export const podcasts = [
     podcast: 'GoRails',
     date: '10 Nov, 2022',
     duration: '1h 00m',
+    audio:
+      '/assets/audio/How-to-Write-Unit-Tests-for-your-Ionic-Angular App-rY5N74OwWVY.mp3',
   },
   {
     cover: '/assets/images/fresh3.jpg',
@@ -34,6 +38,8 @@ export const podcasts = [
     podcast: 'DesignCode',
     date: '10 Nov, 2022',
     duration: '1h 00m',
+    audio:
+      '/assets/audio/How-to-Write-Unit-Tests-for-your-Ionic-Angular App-rY5N74OwWVY.mp3',
   },
   {
     cover: '/assets/images/fresh4.jpg',
@@ -41,6 +47,8 @@ export const podcasts = [
     podcast: 'IndieHackers',
     date: '10 Nov, 2022',
     duration: '1h 00m',
+    audio:
+      '/assets/audio/How-to-Write-Unit-Tests-for-your-Ionic-Angular App-rY5N74OwWVY.mp3',
   },
   {
     cover: '/assets/images/fresh1.jpg',
@@ -48,5 +56,7 @@ export const podcasts = [
     podcast: 'All The Code',
     date: '10 Nov, 2022',
     duration: '1h 00m',
+    audio:
+      '/assets/audio/How-to-Write-Unit-Tests-for-your-Ionic-Angular App-rY5N74OwWVY.mp3',
   },
 ];
