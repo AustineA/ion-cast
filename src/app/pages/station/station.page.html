@@ -13,8 +13,8 @@
 <ion-content [fullscreen]="true" color="cast-bg ion-padding">
   <section>
     <div class="channel-cover">
-      <img src="/assets/images/discover1.jpg" alt="" />
-      <ion-label> All The Code </ion-label>
+      <img [src]="station?.cover" alt="" />
+      <ion-label> {{station?.podcast}} </ion-label>
     </div>
   </section>
 

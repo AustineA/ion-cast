@@ -13,13 +13,10 @@
 <ion-content [fullscreen]="true" color="cast-bg ion-padding">
   <section>
     <div class="cover-art">
-      <img src="/assets/images/fresh1.jpg" alt="" />
-      <ion-label>
-        Growing Dependabot to $14k MRR before selling to Github - Grey Baker,
-        Dependabot
-      </ion-label>
+      <img [src]="podcast?.cover" alt="" />
+      <ion-label> {{podcast?.title}} </ion-label>
 
-      <ion-label class="channel-name"> Indie Bites </ion-label>
+      <ion-label class="channel-name"> {{podcast?.podcast}} </ion-label>
     </div>
   </section>
 

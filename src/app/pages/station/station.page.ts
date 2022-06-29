@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { podcasts, discover } from 'src/app/services/shared/data';
 
 @Component({
@@ -8,7 +9,15 @@ import { podcasts, discover } from 'src/app/services/shared/data';
 })
 export class StationPage implements OnInit {
   fresh = podcasts;
-  constructor() {}
+  station: any;
+  constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getPodcast();
+  }
+
+  getPodcast() {
+    this.station = this.router.getCurrentNavigation().extras.state;
+    console.log(this.station);
+  }
 }

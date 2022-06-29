@@ -22,7 +22,11 @@
   <section class="discover">
     <h3>Discover</h3>
     <div class="discover-list">
-      <div class="discover-card" *ngFor="let item of discoverList">
+      <div
+        class="discover-card"
+        *ngFor="let item of discoverList"
+        (click)="channel(item)"
+      >
         <img [src]="item?.cover" alt="" />
         <ion-label> {{item?.podcast}} </ion-label>
       </div>
@@ -36,7 +40,7 @@
     </div>
 
     <ul class="fresh-list" lines="none">
-      <li *ngFor="let podcast of fresh">
+      <li *ngFor="let podcast of fresh" (click)="castPod(podcast)">
         <div class="fresh-meta">
           <div class="fresh-image">
             <img [src]="podcast?.cover" />

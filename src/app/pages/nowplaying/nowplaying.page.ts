@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonRange } from '@ionic/angular';
 import { Howl, Howler } from 'howler';
 import { podcasts, discover } from 'src/app/services/shared/data';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nowplaying',
@@ -13,10 +14,17 @@ export class NowplayingPage implements OnInit {
   isPlaying: Boolean = false;
   progress = 0;
   player: Howl = null;
-  constructor() {}
+  podcast: any;
+  constructor(private router: Router) {}
 
   ngOnInit() {
-    this.startPlayer(podcasts[0].audio);
+    this.getPodcast();
+    console.log(this.podcast);
+  }
+
+  getPodcast() {
+    this.podcast = this.router.getCurrentNavigation().extras.state;
+    this.startPlayer(this.podcast?.audio);
   }
 
   startPlayer(src) {
@@ -86,5 +94,9 @@ export class NowplayingPage implements OnInit {
         this.playerProgress();
       }
     }, 1000);
+  }
+
+  ionViewWillLeave() {
+    if (this.player) this.player.stop();
   }
 }
