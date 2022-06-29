@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { podcasts, discover } from 'src/app/services/shared/data';
 
 @Component({
@@ -19,5 +19,13 @@ export class StationPage implements OnInit {
   getPodcast() {
     this.station = this.router.getCurrentNavigation().extras.state;
     console.log(this.station);
+  }
+
+  castPod(podcast) {
+    const navExtras: NavigationExtras = {
+      state: podcast,
+    };
+
+    this.router.navigate(['nowplaying'], navExtras);
   }
 }

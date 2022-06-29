@@ -25,7 +25,7 @@
     </div>
 
     <ul class="fresh-list" lines="none">
-      <li *ngFor="let podcast of fresh">
+      <li *ngFor="let podcast of fresh" (click)="castPod(podcast)">
         <div class="fresh-meta">
           <div class="fresh-image">
             <img [src]="podcast?.cover" />

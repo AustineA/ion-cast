@@ -29,8 +29,7 @@ export const podcasts = [
     podcast: 'GoRails',
     date: '10 Nov, 2022',
     duration: '1h 00m',
-    audio:
-      '/assets/audio/How-to-Write-Unit-Tests-for-your-Ionic-Angular App-rY5N74OwWVY.mp3',
+    audio: '/assets/audio/lofi-study-112191.mp3',
   },
   {
     cover: '/assets/images/fresh3.jpg',
@@ -47,8 +46,7 @@ export const podcasts = [
     podcast: 'IndieHackers',
     date: '10 Nov, 2022',
     duration: '1h 00m',
-    audio:
-      '/assets/audio/How-to-Write-Unit-Tests-for-your-Ionic-Angular App-rY5N74OwWVY.mp3',
+    audio: '/assets/audio/lofi-study-112191.mp3',
   },
   {
     cover: '/assets/images/fresh1.jpg',

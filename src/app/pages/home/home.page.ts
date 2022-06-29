@@ -21,8 +21,13 @@ export class HomePage {
     private routerOutlet: IonRouterOutlet
   ) {}
 
-  filter(event) {
-    // console.log(event);
+  search(e) {
+    if (e && e.key === 'Enter') {
+      const navExtras: NavigationExtras = {
+        queryParams: { q: e.target.value },
+      };
+      this.router.navigate(['search-result'], navExtras);
+    }
   }
 
   channel(channel) {

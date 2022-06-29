@@ -19,7 +19,8 @@
       placeholder="Type here to search..."
       animated="true"
       debounce="500"
-      (ionInput)="filter($event)"
+      enterkeyhint="search"
+      (keypress)="search($event)"
       #searchBar
     ></ion-searchbar>
   </div>

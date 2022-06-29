@@ -14,11 +14,22 @@ const routes: Routes = [
   },
   {
     path: 'station',
-    loadChildren: () => import('./pages/station/station.module').then( m => m.StationPageModule)
+    loadChildren: () =>
+      import('./pages/station/station.module').then((m) => m.StationPageModule),
   },
   {
     path: 'nowplaying',
-    loadChildren: () => import('./pages/nowplaying/nowplaying.module').then( m => m.NowplayingPageModule)
+    loadChildren: () =>
+      import('./pages/nowplaying/nowplaying.module').then(
+        (m) => m.NowplayingPageModule
+      ),
+  },
+  {
+    path: 'search-result',
+    loadChildren: () =>
+      import('./pages/search-result/search-result.module').then(
+        (m) => m.SearchResultPageModule
+      ),
   },
 ];
 
