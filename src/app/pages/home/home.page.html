@@ -1,7 +1,12 @@
 <ion-header class="ion-no-border">
   <ion-toolbar color="cast-bg" mode="md">
     <ion-title> IonCast </ion-title>
-    <div slot="end" mode="ios" class="ion-padding-end avatar">
+    <div
+      slot="end"
+      mode="ios"
+      class="ion-padding-end avatar"
+      (click)="openProfile()"
+    >
       <img src="/assets/images/avatar.jpg" />
     </div>
   </ion-toolbar>
@@ -54,4 +59,16 @@
       </li>
     </ul>
   </section>
+
+  <!-- <ion-modal
+    [isOpen]="isActive"
+    [breakpoints]="[0, 0.7, 1]"
+    [initialBreakpoint]="0.7"
+    class="profile-sheet"
+    (didDismiss)="openProfile()"
+  >
+    <ng-template>
+      <app-profile></app-profile>
+    </ng-template>
+  </ion-modal> -->
 </ion-content>
